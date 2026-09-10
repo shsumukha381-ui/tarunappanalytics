@@ -39,14 +39,14 @@ const getRedirectUri = (): string => {
   export const INSTAGRAM_OAUTH_CONFIG: OAuthProviderConfig = {
     clientId: import.meta.env.VITE_INSTAGRAM_CLIENT_ID || '',
     clientSecret: import.meta.env.VITE_INSTAGRAM_CLIENT_SECRET || '',
-    authorizeUrl: 'https://api.instagram.com/oauth/authorize',
-    tokenUrl: 'https://api.instagram.com/oauth/access_token',
+    authorizeUrl: 'https://www.facebook.com/v19.0/dialog/oauth',
+    tokenUrl: 'https://graph.facebook.com/v19.0/oauth/access_token',
     redirectUri: getRedirectUri(),
     scopes: [
     'instagram_basic',
     'instagram_manage_insights',
     'pages_show_list',
-    'business_basic',
+    'business_management',
   ],
 };
 
